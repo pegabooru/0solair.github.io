@@ -3,13 +3,13 @@ ssID = "1NJrmjnYCJp-E4VJyQa3DmeZtm6-PwsFfkmyDBLrkLAw"
 function get() {
     var params = {
     // The ID of the spreadsheet to retrieve data from.
-    spreadsheetId: ssID,
+    spreadsheetId: "1NJrmjnYCJp-E4VJyQa3DmeZtm6-PwsFfkmyDBLrkLAw",
 
     // The A1 notation of the values to retrieve.
     range: 'Sheet1!A:A',
     };
 
-    var request = gapi.client.sheets.spreadsheets.values.get(params);
+    var request = gapi.client.sheets.spreadsheets.get(params);
     request.then(function(response) {
         console.log(response.result.values[0][0])
     }, function(reason) {
